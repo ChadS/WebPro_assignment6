@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Homework 6</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <h2>Payment</h2>
+
+    <hr />
+
+    <div class="payment">
+      <label>Payment: </label>
+
+      <label
+        ><input
+          type="radio"
+          name="payment"
+          id="rdCredit"
+          value="creditcard"
+          checked
+        />Credit Card</label
+      >
+
+      <label
+        ><input
+          type="radio"
+          name="payment"
+          id="rdWireTrans"
+          value="wiretransfer"
+        />Wire Transfer</label
+      >
+
+      <button id="btnBuy" value="Buy">Buy</button>
+    </div>
+
+    <div class="seperator">
+      <div class="creditcard">
+        <label>Card Number: </label>
+
+        <input
+          class="onlyNumbers"
+          maxlength="14"
+          type="text"
+          style="width:8%;"
+          id="txtCardNum"
+        />
+
+        <label>Expiration: </label>
+
+        <input
+          class="onlyNumbers"
+          maxlength="2"
+          type="text"
+          style="width:3%;"
+          id="txtExpMon"
+        />
+
+        <label>/</label>
+
+        <input
+          class="onlyNumbers"
+          maxlength="4"
+          type="text"
+          style="width:3%;"
+          id="txtExpYear"
+        />
+
+        <label>3-digit security number:</label>
+
+        <input
+          class="onlyNumbers"
+          maxlength="3"
+          type="text"
+          style="width:4%;"
+          id="txtSecurityNum"
+        />
+      </div>
+
+      <div class="wiretransfer">
+        <label>Transfer the amount to: </label>
+
+        <label>reg. $957.00, to account 0009286322 </label>
+
+        <label>(zero zero zero nine two eight six three two two)</label>
+      </div>
+    </div>
+
+    <!-- Drag and Drop Section -->
+
+    <h2>Drag & Drop</h2>
+
+    <hr />
+
+    <div id="dragSection">
+      <h3>Drag from here</h3>
+
+      <ul class="removable">
+        <li id="element1" draggable="true" ondragstart="dragIt(event)">
+          Item A
+        </li>
+
+        <li id="element2" draggable="true" ondragstart="dragIt(event)">
+          Item B
+        </li>
+
+        <li id="element3" draggable="true" ondragstart="dragIt(event)">
+          Item C
+        </li>
+
+        <li id="element4" draggable="true" ondragstart="dragIt(event)">
+          Item D
+        </li>
+
+        <li id="element5" draggable="true" ondragstart="dragIt(event)">
+          Item E
+        </li>
+      </ul>
+    </div>
+
+    <div id="dropSection" ondrop="dropIt(event)" ondragover="enableDrop(event)">
+      <img class="trashcan" src="trashcan.png" />
+    </div>
+
+    <!-- uses ajax to load the HTML files -->
+
+    <h2>Click for more Information</h2>
+
+    <hr />
+
+    <h3>Click any item below to get information</h3>
+
+    <ul class="informationable">
+      <li id="info1" value="info1">Information 1</li>
+
+      <li id="info2" value="info2">Information 2</li>
+
+      <li id="info3" value="info3">Information 3</li>
+    </ul>
+
+    <div class="infoContent"></div>
+  </body>
+</html>

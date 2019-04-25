@@ -1,0 +1,21 @@
+.payment {
+  padding: 10px;
+}
+
+.trashcan {
+  height: 150px;
+  width: 150px;
+}
+.wiretransfer {
+  display: none;
+}
+
+#dragSection {
+  width: 180px;
+  float: left;
+}
+.informationable li {
+  cursor: pointer;
+  list-style-type: none;
+  padding: 5px;
+}
